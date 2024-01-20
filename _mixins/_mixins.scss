@@ -1,0 +1,54 @@
+@mixin default{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin section{
+    padding: 1.5rem 6rem;
+    position: relative;
+    height:auto ;
+}
+
+@mixin mediaQuery($type){
+    @if $type == "iPhone+" {
+    @media (min-width:414px) and (max-width:736px) {
+        @content
+    } 
+    } @else if $type == "iPhone"{
+        @media (min-width:320px) and (max-width:767px) {
+            @content
+        }
+    } @else if $type == "iPad"{
+        @media (min-width:768px) and (max-width:1024px) {
+            @content
+        }
+    }
+}
+@mixin font($weight){
+    font-family: 'Playfair Display', serif;
+    font-weight: #{$weight};
+}
+%lorem{
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    color: white;
+    letter-spacing: 2px;
+    width: max-content;
+}
+@mixin roboto($weight){
+    font-family: 'Roboto', sans-serif;
+    font-weight: #{$weight};
+}
+@mixin text($t,$r,$b,$l){
+    position: absolute;
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+}
+@mixin h1($f){
+    font-size: #{$f}rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}

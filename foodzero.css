@@ -1,0 +1,2212 @@
+.allArticle .menuText .lorem, .allArticle .contactRightText .lorem, .allArticle .aboutText .lorem, .introArticle .introText .lorem, .secondArticle .seaFoodbox .lorem, .secondArticle .longSpeciesbox .lorem, .menuSection .lorem, .menuSection .loremMenu, .descriptionSection .descContent .content .lorem, .descriptionSection .recipeContent .recipes .recipeName .lorem, .calMenu .lorem {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  margin: 1rem 0;
+  color: white;
+  letter-spacing: 2px;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #233000;
+  padding: 2rem 6rem;
+}
+header .headName {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header .headName a {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  margin-right: 1rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
+}
+header .headName a::before, header .headName a::after {
+  content: "";
+  display: block;
+  width: 5.3rem;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 0.5rem 1rem;
+}
+header .bars {
+  display: none;
+}
+header .bars .staggered-solid {
+  display: none;
+}
+header .bars .solid {
+  display: none;
+}
+header nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+header nav a {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+}
+header nav a:hover {
+  color: #c4c7bf;
+}
+header nav .reservation {
+  font-family: "Playfair Display", serif;
+  font-weight: 200;
+  font-size: 1rem;
+  margin-left: 1rem;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+header nav .number {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+  }
+  header .bars {
+    cursor: pointer;
+    display: block;
+    z-index: 5;
+  }
+  header .bars .solid {
+    display: block;
+  }
+  header .bars .staggered-solid {
+    display: none;
+  }
+  header .links {
+    visibility: hidden;
+    display: grid;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    background-color: rgba(6, 6, 6, 0.5803921569);
+    -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+    width: 100%;
+    height: auto;
+    line-height: 3rem;
+    padding: 2rem 0;
+    justify-items: center;
+    transform: translateY(-1000px);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 3rem;
+    overflow: hidden;
+  }
+  header .bars {
+    cursor: pointer;
+    display: block;
+    z-index: 5;
+  }
+  header .bars .solid {
+    display: block;
+  }
+  header .bars .staggered-solid {
+    display: none;
+  }
+  header .links {
+    visibility: hidden;
+    display: grid;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    background-color: rgba(6, 6, 6, 0.5803921569);
+    -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+    width: 100%;
+    height: auto;
+    line-height: 3rem;
+    padding: 2rem 0;
+    justify-items: center;
+    transform: translateY(-1000px);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+/* For All Headers - Except HOME Header */
+.anotherHeader {
+  background: transparent;
+  position: relative;
+}
+.anotherHeader .bars img {
+  position: relative;
+  background: transparent;
+}
+
+/* For All Sections - Except HOME Section */
+.grander {
+  height: 100dvh;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .grander {
+    height: 40dvh;
+    width: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grander {
+    height: 50dvh;
+    width: auto;
+  }
+}
+.grander img {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  filter: grayscale(0.5);
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grander img {
+    height: inherit;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .grander img {
+    height: inherit;
+  }
+}
+
+/* For All Articles - Except HOME Article */
+.allArticle {
+  position: relative;
+}
+.allArticle .menuText {
+  position: absolute;
+  top: 5rem;
+  right: unset;
+  bottom: unset;
+  left: 7rem;
+}
+.allArticle .menuText h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 6rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.allArticle .menuText .lorem {
+  position: absolute;
+  font-size: 1rem;
+}
+.allArticle .contactRightText {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 7rem;
+  top: 3rem;
+}
+.allArticle .contactRightText h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 5rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.allArticle .contactRightText .lorem {
+  font-size: 0.7rem;
+}
+.allArticle .contactLeftText {
+  position: absolute;
+  right: 3rem;
+  top: 20rem;
+}
+.allArticle .contactLeftText .upLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.allArticle .contactLeftText .upLeft h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+}
+.allArticle .contactLeftText .upLeft p {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.allArticle .contactLeftText hr {
+  margin: 1rem 0;
+}
+.allArticle .contactLeftText .downLeft {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.allArticle .contactLeftText .downLeft span {
+  color: #ffffff;
+}
+.allArticle .aboutText {
+  position: absolute;
+  right: 7rem;
+  top: 7rem;
+}
+.allArticle .aboutText h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 7rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.allArticle .aboutText .lorem {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+.allArticle .portfolioText {
+  margin: 7rem 0;
+}
+.allArticle .portfolioText h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 8rem;
+  color: #ffffff;
+  letter-spacing: 5px;
+  text-align: center;
+}
+.allArticle .blogsText {
+  margin: 7rem 0;
+}
+.allArticle .blogsText h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 8rem;
+  color: #ffffff;
+  letter-spacing: 5px;
+  text-align: center;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .allArticle .menuText {
+    position: absolute;
+    top: 0rem;
+    right: unset;
+    bottom: unset;
+    left: 2rem;
+  }
+  .allArticle .menuText h1 {
+    font-size: 2rem;
+  }
+  .allArticle .menuText .lorem {
+    font-size: 0.5rem;
+  }
+  .allArticle .contactRightText {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    left: 2rem;
+    top: 0;
+  }
+  .allArticle .contactRightText h1 {
+    font-size: 1.7rem;
+  }
+  .allArticle .contactRightText .lorem {
+    font-size: 0.5rem;
+  }
+  .allArticle .contactLeftText {
+    position: absolute;
+    top: 6rem;
+    right: 2rem;
+  }
+  .allArticle .contactLeftText .upLeft h2 {
+    font-size: 0.8rem;
+  }
+  .allArticle .contactLeftText .upLeft p {
+    font-size: 0.6rem;
+  }
+  .allArticle .contactLeftText hr {
+    margin: 0.8rem 0;
+  }
+  .allArticle .contactLeftText .downLeft {
+    gap: 0.8rem;
+  }
+  .allArticle .contactLeftText .downLeft h3 {
+    font-size: 0.7rem;
+  }
+  .allArticle .contactLeftText .downLeft p {
+    font-size: 0.6rem;
+  }
+  .allArticle .aboutText {
+    right: 1rem;
+    top: 1rem;
+  }
+  .allArticle .aboutText h1 {
+    font-size: 2.5rem;
+  }
+  .allArticle .aboutText .lorem {
+    font-size: 0.6rem;
+    margin-left: 0;
+  }
+  .allArticle .portfolioText {
+    margin: 3rem 0;
+  }
+  .allArticle .portfolioText h1 {
+    font-size: 4rem;
+  }
+  .allArticle .blogsText {
+    margin: 1rem 0;
+  }
+  .allArticle .blogsText h1 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .allArticle .menuText h1 {
+    font-size: 4rem;
+  }
+  .allArticle .menuText .lorem {
+    font-size: 1rem;
+  }
+  .allArticle .contactRightText h1 {
+    font-size: 3.5rem;
+  }
+  .allArticle .contactRightText .lorem {
+    font-size: 0.8rem;
+  }
+  .allArticle .contactLeftText {
+    top: 16rem;
+  }
+  .allArticle .aboutText {
+    top: 5rem;
+  }
+  .allArticle .aboutText h1 {
+    font-size: 5rem;
+  }
+}
+
+/* For BARS - Devices */
+.none {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.visible {
+  visibility: visible !important;
+  transform: translateY(0px) !important;
+}
+
+/* Home Articles */
+.introArticle {
+  display: flex;
+  padding: 2rem 6rem;
+  height: 150dvh;
+  background-color: var(--233000, #233000);
+}
+.introArticle .introText {
+  position: relative;
+  z-index: 2;
+}
+.introArticle .introText h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: white;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+.introArticle .introText .lorem {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+}
+.introArticle .introText .scroll {
+  color: #ffffff;
+  margin: 1rem 0;
+  font-size: 2rem;
+  rotate: 90deg;
+  position: absolute;
+  left: -9rem;
+  bottom: 16rem;
+  cursor: pointer;
+}
+.introArticle .introImages {
+  position: absolute;
+  right: 0;
+  background-color: var(--233000, #233000);
+}
+.introArticle .introImages .meatPlate {
+  width: 43.5rem;
+  height: 44.1875rem;
+  border-radius: 10px;
+  z-index: 0;
+  position: absolute;
+  right: 5rem;
+}
+.introArticle .introImages .spices1Plate, .introArticle .introImages .spices2Plate, .introArticle .introImages .spices3Plate {
+  width: 12.625rem;
+  height: 12rem;
+  position: relative;
+  top: 34rem;
+  margin: 0 1rem;
+  right: 17rem;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .introArticle {
+    padding-top: 2rem;
+    padding-right: 0.5rem;
+    padding-bottom: 10rem;
+    padding-left: 0.5rem;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .introArticle .introText {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .introArticle .introText h1 {
+    font-size: 2.3rem;
+  }
+  .introArticle .introText .lorem {
+    width: 14rem;
+  }
+  .introArticle .introText .scroll {
+    display: none;
+  }
+  .introArticle .introImages {
+    right: 0;
+    position: relative;
+    width: auto;
+  }
+  .introArticle .introImages .meatPlate {
+    position: absolute;
+    filter: brightness(0.8);
+    width: 19.5rem;
+    height: auto;
+    top: 0;
+    right: -3.5rem;
+  }
+  .introArticle .introImages .spices1Plate, .introArticle .introImages .spices2Plate, .introArticle .introImages .spices3Plate {
+    position: absolute;
+    filter: brightness(0.8);
+    width: 6.625rem;
+    height: auto;
+    top: 18rem;
+  }
+  .introArticle .introImages .spices1Plate {
+    right: 9rem;
+  }
+  .introArticle .introImages .spices2Plate {
+    right: 2rem;
+  }
+  .introArticle .introImages .spices3Plate {
+    right: -5rem;
+  }
+}
+@media (min-width: 414px) and (max-width: 736px) {
+  .introArticle .introImages .meatPlate {
+    right: -6.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .introArticle {
+    height: 60dvh;
+    padding: 0 3rem;
+  }
+  .introArticle .introText h1 {
+    font-size: 4.3rem;
+  }
+  .introArticle .introText .scroll {
+    display: none;
+  }
+  .introArticle .introImages .meatPlate {
+    width: 27.5rem;
+    height: auto;
+    right: 3rem;
+  }
+  .introArticle .introImages .spices1Plate, .introArticle .introImages .spices2Plate, .introArticle .introImages .spices3Plate {
+    width: 8.625rem;
+    height: auto;
+    top: 25rem;
+  }
+  .introArticle .introImages .spices1Plate {
+    right: 5rem;
+  }
+  .introArticle .introImages .spices2Plate {
+    right: 6rem;
+  }
+  .introArticle .introImages .spices3Plate {
+    right: 6rem;
+  }
+}
+
+.secondArticle {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  background-color: var(--233000, #233000);
+}
+.secondArticle .seaFoodbox {
+  margin-bottom: 3rem;
+}
+.secondArticle .seaFoodbox .seaFoodPlate {
+  width: 33.5rem;
+  height: 25rem;
+  border-radius: 10px;
+}
+.secondArticle .seaFoodbox p {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 3rem;
+}
+.secondArticle .seaFoodbox .lorem {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+}
+.secondArticle .longSpeciesbox {
+  position: absolute;
+  right: 6rem;
+}
+.secondArticle .longSpeciesbox .lorem {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  width: 23.75rem;
+}
+.secondArticle .longSpeciesbox .longSpecies {
+  width: 23.75rem;
+  height: 34.375rem;
+  border-radius: 10px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .secondArticle {
+    flex-direction: column;
+    padding: 0;
+  }
+  .secondArticle .seaFoodbox {
+    margin-top: 6rem;
+    width: 100%;
+  }
+  .secondArticle .seaFoodbox .seaFoodPlate {
+    width: 18.5rem;
+    height: auto;
+    filter: brightness(0.7);
+    position: relative;
+    right: -3rem;
+    z-index: 1;
+  }
+  .secondArticle .seaFoodbox p {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+    z-index: 3;
+  }
+  .secondArticle .seaFoodbox .lorem {
+    display: none;
+  }
+  .secondArticle .longSpeciesbox {
+    position: relative;
+    margin-bottom: 2rem;
+    width: 23rem;
+    height: 20rem;
+  }
+  .secondArticle .longSpeciesbox .lorem {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    bottom: 1rem;
+    left: 6rem;
+  }
+  .secondArticle .longSpeciesbox .longSpecies {
+    width: 12.75rem;
+    height: auto;
+    position: absolute;
+    left: 7rem;
+    top: 1rem;
+    filter: brightness(0.7);
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .secondArticle {
+    height: 45rem;
+    margin-bottom: 0;
+  }
+  .secondArticle .seaFoodbox {
+    margin-top: 2rem;
+  }
+  .secondArticle .seaFoodbox .seaFoodPlate {
+    width: 22.5rem;
+    height: auto;
+  }
+  .secondArticle .seaFoodbox p {
+    position: relative;
+    top: 0rem;
+    left: 1rem;
+  }
+  .secondArticle .seaFoodbox .lorem {
+    display: block;
+    width: 15rem;
+  }
+  .secondArticle .longSpeciesbox {
+    top: -18rem;
+    right: -7rem;
+  }
+  .secondArticle .longSpeciesbox .lorem {
+    display: block;
+    position: relative;
+    top: 24rem;
+    left: -4rem;
+    text-align: left;
+  }
+  .secondArticle .longSpeciesbox .longSpecies {
+    width: 19.75rem;
+    height: auto;
+    position: absolute;
+    left: -5rem;
+    top: 30rem;
+  }
+}
+
+/* Menu Section */
+.menuSection {
+  padding: 1.5rem 6rem;
+  position: relative;
+  height: auto;
+  margin-top: 2.5rem;
+  height: -moz-max-content;
+  height: max-content;
+  overflow: hidden;
+}
+.menuSection .flowers {
+  width: 22rem;
+  height: auto;
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  top: 0.3rem;
+}
+.menuSection h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  position: relative;
+  font-size: 5rem;
+  z-index: 2;
+}
+.menuSection .lorem, .menuSection .loremMenu {
+  color: black;
+}
+.menuSection .foodMenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 5rem 0;
+}
+.menuSection .foodMenu .foodInfo {
+  position: relative;
+}
+.menuSection .foodMenu .foodInfo .price {
+  position: absolute;
+  right: 0.5rem;
+  top: -1.3rem;
+}
+.menuSection .foodMenu .foodInfo h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin: 0.5rem 0;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .menuSection {
+    padding: 0 1rem;
+  }
+  .menuSection h2 {
+    text-align: center;
+  }
+  .menuSection .lorem {
+    text-align: left;
+    width: auto;
+  }
+  .menuSection .loremMenu {
+    text-align: center;
+    width: auto;
+  }
+}
+
+.cookSection {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 1.5rem;
+  padding-right: 7rem;
+  padding-left: 7rem;
+  padding-bottom: 1rem;
+  height: 31rem;
+  position: relative;
+  background-color: var(--EBF0E4, #EBF0E4);
+}
+.cookSection .leftChef {
+  position: relative;
+  margin-top: 2rem;
+  height: -moz-max-content;
+  height: max-content;
+}
+.cookSection .leftChef .chef {
+  position: absolute;
+  width: 28rem;
+  height: auto;
+  z-index: 0;
+  overflow: hidden;
+}
+.cookSection .leftChef .brownplate {
+  position: absolute;
+  z-index: 1;
+  width: 13.9rem;
+  top: 1rem;
+  height: auto;
+  left: 0.5rem;
+}
+.cookSection .leftChef .leafOne {
+  width: 12rem;
+  position: absolute;
+  left: 0rem;
+  top: -1rem;
+  z-index: 0;
+}
+.cookSection .rightContent {
+  padding-top: 3rem;
+}
+.cookSection .rightContent .content h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  margin: 0.5rem 0;
+}
+.cookSection .rightContent .content .lorem {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: rgb(65, 64, 64);
+}
+.cookSection .rightContent .leafOne {
+  width: 15rem;
+  position: absolute;
+  right: 5rem;
+  bottom: 0.5rem;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .cookSection {
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
+  }
+  .cookSection .leftChef .brownplate {
+    display: none;
+  }
+  .cookSection .leftChef .chef {
+    width: 23rem;
+    left: -8rem;
+    z-index: 2;
+  }
+  .cookSection .rightContent {
+    padding: 0;
+  }
+  .cookSection .rightContent .content h3 {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 2rem;
+    text-align: center;
+  }
+  .cookSection .rightContent .content .lorem {
+    position: absolute;
+    top: 10rem;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cookSection {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .cookSection .leftChef .chef {
+    width: 29rem;
+    left: -9rem;
+    top: -1rem;
+    bottom: 0;
+  }
+  .cookSection .leftChef .brownplate {
+    display: none;
+  }
+  .cookSection .rightContent .content h3 {
+    font-size: 4.5rem;
+    text-align: left;
+  }
+  .cookSection .rightContent .content .lorem {
+    top: 15rem;
+    text-align: left;
+  }
+  .cookSection .rightContent .leafOne {
+    width: 14rem;
+  }
+}
+
+/* Description Section */
+.descriptionSection {
+  width: auto;
+}
+.descriptionSection .descContent {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem;
+  padding-top: 2rem;
+}
+.descriptionSection .descContent .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.descriptionSection .descContent .content h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+}
+.descriptionSection .descContent .content .lorem {
+  color: #233000;
+  width: auto;
+  text-align: center;
+}
+.descriptionSection .descContent .content img {
+  width: 10rem;
+  height: auto;
+  align-self: center;
+  background-color: var(--EBF0E4, #EBF0E4);
+  border-radius: 50%;
+  padding: 1rem;
+  margin: 1rem;
+}
+.descriptionSection .recipeContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.descriptionSection .recipeContent .recipes {
+  justify-self: center;
+  position: relative;
+}
+.descriptionSection .recipeContent .recipes .fruitBox {
+  width: 34rem;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.descriptionSection .recipeContent .recipes .fashion {
+  background-color: #5E6600;
+  width: 7rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 0.6rem;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 0.3rem;
+  right: 2.5rem;
+}
+.descriptionSection .recipeContent .recipes .userData {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.descriptionSection .recipeContent .recipes .userData .userImg {
+  width: 3rem;
+  height: auto;
+  cursor: pointer;
+}
+.descriptionSection .recipeContent .recipes .userData .user {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  cursor: pointer;
+  color: #4D4D4D;
+  margin: 0 0.9rem;
+}
+.descriptionSection .recipeContent .recipes .userData .userDate, .descriptionSection .recipeContent .recipes .userData .userTime, .descriptionSection .recipeContent .recipes .userData .userComments {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  color: #4D4D4D;
+  margin: 0 0.9rem;
+}
+.descriptionSection .recipeContent .recipes .recipeName h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.descriptionSection .recipeContent .recipes .recipeName .lorem {
+  color: #4D4D4D;
+}
+.descriptionSection .recipeContent .recipes .recipeName .readmore {
+  display: flex;
+  align-items: flex-end;
+  margin: 2rem 0;
+}
+.descriptionSection .recipeContent .recipes .recipeName .readmore a {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  text-decoration: none;
+  color: #4D4D4D;
+  letter-spacing: 1px;
+}
+.descriptionSection .recipeContent .recipes .recipeName .readmore img {
+  width: 2rem;
+  height: auto;
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+.descriptionSection .blog {
+  padding: 1rem 4rem;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .descriptionSection {
+    display: grid;
+    justify-items: start;
+  }
+  .descriptionSection .descContent {
+    display: grid;
+    margin: 0 10px;
+    width: auto;
+  }
+  .descriptionSection .descContent .content {
+    margin: 0;
+  }
+  .descriptionSection .recipeContent {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 1rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+  .descriptionSection .recipeContent .recipes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .descriptionSection .recipeContent .recipes .fruitBox {
+    width: 22rem;
+  }
+  .descriptionSection .recipeContent .recipes .fashion {
+    right: 2rem;
+    display: none;
+  }
+  .descriptionSection .recipeContent .recipes .recipeName {
+    padding: 4px;
+  }
+  .descriptionSection .recipeContent .recipes .recipeName .lorem {
+    width: auto;
+  }
+  .descriptionSection .blog {
+    padding: 1rem 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .descriptionSection .descContent {
+    display: flex;
+    width: auto;
+  }
+  .descriptionSection .descContent .content {
+    justify-content: space-around;
+  }
+  .descriptionSection .recipeContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reservation Section */
+.reservSection {
+  padding: 1.5rem 6rem;
+  position: relative;
+  height: auto;
+  display: grid;
+  justify-items: center;
+  margin: 3rem 0;
+  width: auto;
+  background-color: #EBF0E4;
+  padding-bottom: 5rem;
+}
+.reservSection h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-top: 5rem;
+  text-align: center;
+}
+.reservSection .lorem {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  color: #4D4D4D;
+  text-align: center;
+}
+.reservSection .reservInputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+.reservSection .reservInputs input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  width: 18rem;
+  padding: 0.7rem;
+  margin: 1rem;
+  border: 1px solid black;
+  outline: none;
+}
+.reservSection .reservInputs input::-moz-selection {
+  background-color: #d8dbd3;
+}
+.reservSection .reservInputs input::selection {
+  background-color: #d8dbd3;
+}
+.reservSection .reservInputs input::-webkit-inner-spin-button, .reservSection .reservInputs input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.reservSection button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  position: absolute;
+  bottom: 3rem;
+  background-color: #5E6600;
+  padding: 0.8rem 2rem;
+  border: transparent;
+  color: white;
+  width: 10rem;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .reservSection {
+    padding: 0;
+    margin: 1rem auto;
+    width: auto;
+  }
+  .reservSection .reservInputs {
+    display: grid;
+    justify-items: center;
+  }
+  .reservSection button {
+    bottom: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reservSection {
+    width: auto;
+  }
+  .reservSection .reservInputs {
+    display: grid;
+    justify-items: center;
+  }
+}
+
+/* Calories Section */
+.calMenu {
+  padding: 1.5rem 6rem;
+  position: relative;
+  height: auto;
+}
+.calMenu h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+  font-size: 3rem;
+}
+.calMenu .lorem {
+  color: #4D4D4D;
+  text-align: center;
+}
+.calMenu .calBoxs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.calMenu .calBoxs .calContent {
+  margin: 3rem 0;
+  position: relative;
+}
+.calMenu .calBoxs .calContent img {
+  width: 20rem;
+  height: auto;
+  border-radius: 10px;
+}
+.calMenu .calBoxs .calContent p {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #5E6600;
+}
+.calMenu .calBoxs .calContent .arrow {
+  width: 2rem;
+  height: auto;
+  position: absolute;
+  top: 1.6rem;
+  right: 2rem;
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .calMenu {
+    padding: 0;
+    margin: 3rem 0;
+  }
+  .calMenu .calBoxs {
+    display: grid;
+  }
+  .calMenu .lorem {
+    width: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .calMenu {
+    padding: 0;
+  }
+  .calMenu .calBoxs {
+    display: flex;
+    width: auto;
+  }
+  .calMenu .calBoxs .calContent img {
+    width: 14rem;
+  }
+}
+
+/* Testimonial Section */
+.testimonialSection {
+  padding: 1.5rem 6rem;
+  position: relative;
+  height: auto;
+}
+.testimonialSection .testimonial {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+.testimonialSection .coma {
+  font-size: 32rem;
+  color: #4D4D4D;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  top: -23rem;
+  right: 5rem;
+  opacity: 0.1;
+  z-index: 0;
+}
+.testimonialSection .clientBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem;
+}
+.testimonialSection .clientBox .client {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.testimonialSection .clientBox .client img {
+  width: 4rem;
+  height: auto;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.testimonialSection .clientBox .client h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.testimonialSection .clientBox .client p {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #4D4D4D;
+  font-size: 0.9rem;
+}
+.testimonialSection .clientBox .testimonialNum {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: end;
+}
+.testimonialSection .clientBox .testimonialNum .arrow {
+  width: 1.5rem;
+  height: auto;
+  margin: 0 0.7rem;
+  cursor: pointer;
+}
+.testimonialSection .clientBox .testimonialNum .changer {
+  margin-right: 0.2rem;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .testimonialSection {
+    padding: 0;
+  }
+  .testimonialSection .coma {
+    top: -25rem;
+    right: 0rem;
+  }
+  .testimonialSection .clientBox {
+    margin: 2rem 10px;
+  }
+}
+
+/* Menu Page Section*/
+.menuItems {
+  position: relative;
+  padding: 2rem 0;
+}
+.menuItems .blueberry {
+  width: 13rem;
+  height: auto;
+  position: absolute;
+  right: 0rem;
+}
+.menuItems .allContent {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.menuItems .allContent .content {
+  display: grid;
+  margin-top: 5rem;
+}
+.menuItems .allContent .content h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.menuItems .allContent .content .lorem {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+}
+.menuItems .allContent .content .items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+.menuItems .allContent .content .items .imgDiv {
+  display: flex;
+  justify-content: center;
+}
+.menuItems .allContent .content .items .imgDiv .itemImg {
+  width: 23.5rem;
+  height: auto;
+  border-radius: 10px;
+}
+.menuItems .allContent .content .items .itemContent .menutitle {
+  margin-bottom: 1rem;
+}
+.menuItems .allContent .content .items .itemContent .menutitle .price {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-align: right;
+}
+.menuItems .allContent .content .items .itemContent .menutitle hr {
+  margin: 0.8rem 0;
+}
+.menuItems .allContent .content .items .itemContent .menutitle h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 1.9rem;
+}
+.menuItems .allContent .content .items .itemContent .menutitle .lorem {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  color: black;
+  letter-spacing: 1px;
+  text-align: left;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .menuItems .allContent .content {
+    padding: 0 2rem;
+  }
+  .menuItems .allContent .content .items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .menuItems .allContent .content .items .imgDiv .itemImg {
+    width: 19.5rem;
+  }
+  .menuItems .allContent #mains .items {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menuItems .allContent .content {
+    padding: 0 1rem;
+  }
+}
+
+/* Contact Page Artciles */
+.detailsArticle {
+  position: relative;
+  padding: 10rem 6rem;
+}
+.detailsArticle .detailBoxs {
+  display: grid;
+  gap: 3rem;
+}
+.detailsArticle .detailBoxs .detailContent {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+}
+.detailsArticle .detailBoxs .detailContent .imgs {
+  position: relative;
+}
+.detailsArticle .detailBoxs .detailContent .imgs .orangeImg {
+  width: 15rem;
+  height: auto;
+  position: absolute;
+  top: -9rem;
+  right: -5rem;
+}
+.detailsArticle .detailBoxs .detailContent .imgs .imgOne {
+  width: 30rem;
+  height: inherit;
+  border-radius: 10px;
+  position: relative;
+}
+.detailsArticle .detailBoxs .detailContent span {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  align-self: flex-end;
+  justify-self: center;
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+}
+.detailsArticle .detailBoxs .detailContent span a {
+  text-decoration: none;
+  color: #919e04;
+}
+.detailsArticle .detailBoxs #another {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+}
+.detailsArticle .detailBoxs #another .content {
+  display: grid;
+}
+.detailsArticle .detailBoxs #another .content span {
+  margin-bottom: 1rem;
+}
+.detailsArticle .detailBoxs #another .content button {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 10rem;
+  background: transparent;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 5rem;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .detailsArticle {
+    margin-top: 3rem;
+    padding: 3rem 0;
+  }
+  .detailsArticle .detailBoxs {
+    gap: 0;
+  }
+  .detailsArticle .detailBoxs .detailContent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detailsArticle .detailBoxs .detailContent .imgs .orangeImg {
+    width: 10rem;
+    top: -3rem;
+    right: 0;
+  }
+  .detailsArticle .detailBoxs .detailContent .imgs .imgOne {
+    width: 20rem;
+    margin-left: 1.3rem;
+  }
+  .detailsArticle .detailBoxs .detailContent span {
+    align-self: auto;
+    text-align: center;
+    margin-left: 1.3rem;
+  }
+  .detailsArticle .detailBoxs #another {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detailsArticle .detailBoxs #another .imgs .imgOne {
+    width: 20rem;
+  }
+  .detailsArticle .detailBoxs #another .content span {
+    width: 15rem;
+    text-align: center;
+  }
+  .detailsArticle .detailBoxs #another .content button {
+    margin-left: 3.3rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .detailsArticle {
+    padding: 10rem 4rem;
+  }
+  .detailsArticle .detailBoxs .detailContent .imgs .imgOne {
+    width: 25rem;
+  }
+}
+
+#reservContact .mint {
+  width: 17rem;
+  height: auto;
+  position: absolute;
+  left: 12rem;
+  top: 2rem;
+}
+#reservContact .reservInputs {
+  display: grid;
+  justify-items: center;
+  grid-template-areas: "fr fr fr fr fr fr  ls ls ls ls ls ls" "em em em em em em em em em em em em" "ph ph ph ph ph ph ph ph ph ph ph ph" "dt dt dt dt dt dt tm tm tm tm tm tm" "prs prs prs prs prs prs prs prs prs prs prs prs";
+  width: 100%;
+}
+#reservContact .reservInputs input::-webkit-outer-spin-button,
+#reservContact .reservInputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#reservContact .reservInputs .firstName {
+  grid-area: fr;
+}
+#reservContact .reservInputs .lastName {
+  grid-area: ls;
+}
+#reservContact .reservInputs .email {
+  grid-area: em;
+}
+#reservContact .reservInputs .phone {
+  grid-area: ph;
+}
+#reservContact .reservInputs .date {
+  grid-area: dt;
+}
+#reservContact .reservInputs .time {
+  grid-area: tm;
+}
+#reservContact .reservInputs .persons {
+  grid-area: prs;
+}
+#reservContact .reservInputs .firstName, #reservContact .reservInputs .lastName, #reservContact .reservInputs .date, #reservContact .reservInputs .time {
+  width: 29rem;
+}
+#reservContact .reservInputs .email, #reservContact .reservInputs .phone, #reservContact .reservInputs .persons {
+  width: 60rem;
+}
+#reservContact .reservInputs button {
+  bottom: 5rem;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #reservContact {
+    padding: 0;
+    width: auto;
+  }
+  #reservContact .mint {
+    left: 3rem;
+  }
+  #reservContact .reservInputs .firstName, #reservContact .reservInputs .lastName, #reservContact .reservInputs .date, #reservContact .reservInputs .time {
+    width: 21rem;
+  }
+  #reservContact .reservInputs .email, #reservContact .reservInputs .phone, #reservContact .reservInputs .persons {
+    width: 44rem;
+  }
+  #reservContact .reservInputs button {
+    bottom: 1rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  #reservContact .mint {
+    left: 0rem;
+  }
+  #reservContact .reservInputs {
+    grid-template-areas: none;
+    grid-template-rows: repeat(8, 1fr);
+    width: auto;
+  }
+  #reservContact .reservInputs .firstName, #reservContact .reservInputs .lastName, #reservContact .reservInputs .date, #reservContact .reservInputs .time {
+    grid-area: auto;
+    width: auto;
+  }
+  #reservContact .reservInputs .email, #reservContact .reservInputs .phone, #reservContact .reservInputs .persons {
+    grid-area: auto;
+    width: auto;
+  }
+  #reservContact .reservInputs button {
+    bottom: 4rem;
+  }
+}
+
+/* About Section */
+.aboutSection {
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  gap: 3rem;
+  margin: 3rem 0;
+  padding: 1rem 5rem;
+}
+.aboutSection .tomatoImg {
+  position: absolute;
+  width: 12rem;
+  height: auto;
+  top: -2rem;
+  right: 36rem;
+}
+.aboutSection .aboutContent {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 5rem;
+  position: relative;
+}
+.aboutSection .aboutContent .contentText {
+  align-self: flex-end;
+}
+.aboutSection .aboutContent .contentText h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+.aboutSection .aboutContent .contentText .lorem {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  width: auto;
+}
+.aboutSection .aboutContent .chefCooking {
+  width: 30rem;
+  height: auto;
+  border-radius: 10px;
+}
+.aboutSection .ceosContent {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.aboutSection .ceosContent .ceos {
+  position: relative;
+  margin: 0 2rem;
+}
+.aboutSection .ceosContent .ceos h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+}
+.aboutSection .ceosContent .ceos p {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  text-align: center;
+}
+.aboutSection .ceosContent .ceos img {
+  width: 30rem;
+  height: auto;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+.aboutSection .ceosContent .lorem {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .aboutSection {
+    padding: 0;
+  }
+  .aboutSection .tomatoImg {
+    width: 10rem;
+    top: -3rem;
+    right: 0rem;
+  }
+  .aboutSection .aboutContent {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .aboutSection .aboutContent .chefCooking {
+    width: 23rem;
+  }
+  .aboutSection .aboutContent .contentText {
+    padding: 0 0.5rem;
+  }
+  .aboutSection .ceosContent {
+    flex-direction: column;
+  }
+  .aboutSection .ceosContent .ceos {
+    margin: 0;
+  }
+  .aboutSection .ceosContent .ceos img {
+    width: 23rem;
+  }
+  .aboutSection .chefContent {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .aboutSection {
+    padding: 0;
+  }
+  .aboutSection .aboutContent {
+    padding: 0 1rem;
+  }
+}
+
+.video {
+  position: relative;
+  margin: 3rem 0;
+}
+.video .aboutVideo {
+  width: 100%;
+  height: auto;
+  filter: brightness(40%);
+}
+.video .play {
+  position: absolute;
+  cursor: pointer;
+  width: 10rem;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .video .play {
+    width: 5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .video .play {
+    width: 8rem;
+  }
+}
+
+.aboutProcess {
+  position: relative;
+  margin: 3rem 0;
+  padding: 1rem 5rem;
+}
+.aboutProcess .rosemaryUp {
+  position: absolute;
+  width: 12rem;
+  right: 0rem;
+}
+.aboutProcess h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.aboutProcess .processes {
+  display: grid;
+  grid-template-areas: "o o o o o o o o o o o o" "n n n n n n c c c c c c";
+  position: relative;
+  margin: 3rem 0;
+  padding: 1rem 5rem;
+  z-index: 1;
+}
+.aboutProcess .processes .process {
+  display: flex;
+  align-items: center;
+  grid-area: o;
+  gap: 3rem;
+  margin: 3rem;
+}
+.aboutProcess .processes .process img {
+  width: 25rem;
+  height: auto;
+  border-radius: 10px;
+}
+.aboutProcess .processes .process h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 3rem;
+}
+.aboutProcess .processes .process .lorem {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+.aboutProcess .processes .column, .aboutProcess .processes .next {
+  grid-area: c;
+  flex-direction: column;
+  justify-items: center;
+  gap: 2rem;
+}
+.aboutProcess .processes .column h2, .aboutProcess .processes .next h2 {
+  text-align: center;
+}
+.aboutProcess .processes .column .lorem, .aboutProcess .processes .next .lorem {
+  text-align: center;
+  width: 20rem;
+}
+.aboutProcess .processes .next {
+  grid-area: n;
+}
+.aboutProcess .rosemaryDown {
+  position: absolute;
+  width: 12rem;
+  left: 0rem;
+  bottom: 6rem;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .aboutProcess {
+    padding: 0;
+  }
+  .aboutProcess .processes {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutProcess .processes .process {
+    display: grid;
+    justify-items: center;
+    margin: 1rem;
+  }
+  .aboutProcess .processes .process img {
+    width: 22rem;
+  }
+  .aboutProcess .processes .process h2 {
+    text-align: center;
+  }
+  .aboutProcess .processes .process .lorem {
+    text-align: center;
+  }
+  .aboutProcess .processes .column, .aboutProcess .processes .next {
+    position: relative;
+    right: 0;
+  }
+  .aboutProcess .processes .next {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .aboutProcess {
+    padding: 1rem;
+  }
+  .aboutProcess .processes {
+    padding: 0;
+  }
+  .aboutProcess .processes .process {
+    margin: 2rem;
+  }
+  .aboutProcess .processes .process img {
+    width: 20rem;
+  }
+  .aboutProcess .processes .next {
+    right: 24rem;
+  }
+}
+
+/* Portfolio Article */
+.portfolioArticle {
+  position: relative;
+  margin: 3rem 0;
+  padding: 1rem 5rem;
+}
+.portfolioArticle nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.portfolioArticle nav a {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #4D4D4D;
+  text-align: center;
+  transition: hover 2s ease-in-out;
+  position: relative;
+}
+.portfolioArticle nav a::after {
+  content: "";
+  display: block;
+  background-color: #c4c7bf;
+  width: 0%;
+  height: 2px;
+  transition: all 0.5s ease-in-out;
+}
+.portfolioArticle nav a:hover::after {
+  width: 100%;
+}
+.portfolioArticle nav a:hover {
+  color: #7a7a78;
+}
+.portfolioArticle .portfolioItems {
+  position: relative;
+  margin: 3rem 0;
+  padding: 1rem 3rem;
+}
+.portfolioArticle .portfolioItems .items {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 4rem 0;
+}
+.portfolioArticle .portfolioItems .items .item {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.portfolioArticle .portfolioItems .items .item .portfolioImg {
+  width: 48rem;
+  height: 35rem;
+  border-radius: 10px;
+  filter: brightness(0.8);
+}
+.portfolioArticle .portfolioItems .items .item .portfolioImgshrink {
+  width: 18rem;
+  height: 35rem;
+  border-radius: 10px;
+  filter: brightness(0.8);
+}
+.portfolioArticle .portfolioItems .items .item .normal {
+  width: 33rem;
+  height: auto;
+  border-radius: 10px;
+}
+.portfolioArticle .portfolioItems .items .item .itemInfo {
+  position: absolute;
+  width: auto;
+  bottom: 1rem;
+  padding: 0 1rem;
+}
+.portfolioArticle .portfolioItems .items .item .itemInfo a {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  margin: 0.5rem 0;
+}
+.portfolioArticle .portfolioItems .items .item .itemInfo p {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: white;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .portfolioArticle {
+    padding: 0;
+  }
+  .portfolioArticle nav {
+    gap: 0.4rem;
+  }
+  .portfolioArticle nav a {
+    font-size: 1rem;
+  }
+  .portfolioArticle .portfolioItems {
+    padding: 0 0.5rem;
+  }
+  .portfolioArticle .portfolioItems .items {
+    gap: 0.8rem;
+  }
+  .portfolioArticle .portfolioItems .items .item .portfolioImg {
+    width: 15rem;
+    height: auto;
+  }
+  .portfolioArticle .portfolioItems .items .item .portfolioImgshrink {
+    width: 7rem;
+    height: auto;
+  }
+  .portfolioArticle .portfolioItems .items .item .normal {
+    width: 11rem;
+  }
+  .portfolioArticle .portfolioItems .items .item .itemInfo {
+    bottom: 2rem;
+  }
+  .portfolioArticle .portfolioItems .items .item .itemInfo a {
+    font-size: 1rem;
+  }
+  .portfolioArticle .portfolioItems .items .item .itemInfo p {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .portfolioArticle {
+    padding: 0;
+  }
+  .portfolioArticle .portfolioItems {
+    padding: 0;
+  }
+  .portfolioArticle .portfolioItems .items .item .portfolioImg {
+    width: 27.5rem;
+    height: auto;
+  }
+  .portfolioArticle .portfolioItems .items .item .portfolioImgshrink {
+    width: 13rem;
+    height: auto;
+  }
+  .portfolioArticle .portfolioItems .items .item .normal {
+    width: 20.5rem;
+  }
+}
+
+/* Footer */
+footer {
+  padding: 1.5rem 0;
+  position: relative;
+  height: auto;
+  background-color: #233000;
+}
+footer .upBox {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 6rem;
+}
+footer .upBox h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: white;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+footer .upBox .contactBox {
+  display: grid;
+  justify-items: center;
+}
+footer .upBox .contactBox ol {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0;
+}
+footer .upBox .contactBox ol h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+footer .upBox .contactBox ol li {
+  list-style: none;
+  line-height: 1.5rem;
+}
+footer .upBox .contactBox ol li a {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+}
+footer .upBox .contactBox .address {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+footer .upBox .subscribeBox {
+  margin: 0 3rem;
+}
+footer .upBox .subscribeBox form {
+  display: grid;
+  align-items: center;
+  margin-left: 2rem;
+}
+footer .upBox .subscribeBox form .head {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.9rem;
+}
+footer .upBox .subscribeBox form input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+  width: 20rem;
+  height: 2.3rem;
+  padding: 0.7rem;
+  outline: none;
+  background: transparent;
+  border: 0.5px solid white;
+  color: white;
+}
+footer .upBox .subscribeBox form input::-moz-placeholder {
+  color: #EBF0E4;
+}
+footer .upBox .subscribeBox form input::placeholder {
+  color: #EBF0E4;
+}
+footer .upBox .subscribeBox form .hint {
+  font-family: "Playfair Display", serif;
+  font-weight: 200;
+  color: white;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+}
+footer .upBox .subscribeBox form button {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #ffffff;
+  position: absolute;
+  width: 10rem;
+  height: 2.5rem;
+  right: 2rem;
+  margin-top: 1.8rem;
+  background-color: #5E6600;
+  border: transparent;
+  letter-spacing: 1px;
+  padding: 0.6rem;
+}
+footer .downBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+footer .downBox .rights {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+footer .downBox .rights a {
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #EBF0E4;
+}
+footer .downBox .rights a:focus {
+  color: #ffffff;
+}
+footer .downBox .socials {
+  display: flex;
+  gap: 1rem;
+}
+footer .downBox .socials img {
+  cursor: pointer;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  footer {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  footer .upBox {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+  }
+  footer .upBox h1 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+  }
+  footer .upBox .contactBox {
+    display: none;
+  }
+  footer .upBox .subscribeBox form button {
+    height: 2.5rem;
+    margin-top: 1.8rem;
+    right: 1rem;
+  }
+  footer .downBox {
+    padding: 0 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  footer .upBox h1 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+  footer .upBox .subscribeBox {
+    position: relative;
+    left: -14rem;
+    top: 1rem;
+  }
+  footer .upBox .subscribeBox form input {
+    height: 2.4rem;
+  }
+  footer .upBox .subscribeBox form button {
+    height: 2.5rem;
+    margin-top: 1.9rem;
+    left: 20rem;
+  }
+  footer .upBox .contactBox {
+    display: block;
+    position: absolute;
+    right: 3rem;
+    top: 0rem;
+  }
+}/*# sourceMappingURL=foodzero.css.map */

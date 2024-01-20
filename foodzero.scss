@@ -1,0 +1,2129 @@
+@use "./_mixins/_mixins.scss" as *;
+
+*{
+   @include default;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #233000;
+    padding:2rem 6rem;
+    .headName{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        a{
+            @include font(700);
+            color: white;
+            letter-spacing: 1px;
+            margin-right:1rem ;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.5rem;
+            &::before , &::after{
+                content: "";
+                display: block;
+                width: 5.3rem;
+                height: 1px;
+                background-color: #ffffff;
+                margin: 0.5rem 1rem;
+            }
+        }
+    }
+    .bars{
+        display: none;
+        .staggered-solid{
+            display: none;
+        }
+        .solid{
+            display: none;
+        }
+    }
+    nav{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        a{
+            @include font(700);
+            display: inline-block;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-decoration: none;
+            position: relative;
+            text-align: center;
+            &:hover{
+                color: #c4c7bf;
+            }
+        }
+        .reservation{
+            @include font(200);
+            font-size: 1rem;
+            margin-left: 1rem;
+            padding: 0.7rem 1.4rem;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: transparent;
+            cursor: pointer;
+            color: white
+        }
+        .number{
+            @include font(600);
+            text-decoration: none;
+            color: white;
+        }
+    }
+        @include mediaQuery("iPhone"){
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1rem;
+            overflow: hidden;
+                .bars{
+                    cursor: pointer;
+                    display: block;
+                    z-index: 5;
+                    .solid{
+                        display: block;
+                    }
+                    .staggered-solid{
+                        display: none;
+                    }
+                }
+            .links{
+                visibility: hidden;
+                display: grid;
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 4;
+                background-color: #06060694;
+                backdrop-filter: blur(25px);
+                width: 100%;
+                height: auto;
+                line-height: 3rem;
+                padding: 2rem 0;
+                justify-items: center;
+                transform: translateY(-1000px);
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+        @include mediaQuery("iPad"){
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1rem 3rem;
+            overflow: hidden;
+                .bars{
+                    cursor: pointer;
+                    display: block;
+                    z-index: 5;
+                    .solid{
+                        display: block;
+                    }
+                    .staggered-solid{
+                        display: none;
+                    }
+                }
+            .links{
+                visibility: hidden;
+                display: grid;
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 4;
+                background-color: #06060694;
+                backdrop-filter: blur(25px);
+                width: 100%;
+                height: auto;
+                line-height: 3rem;
+                padding: 2rem 0;
+                justify-items: center;
+                transform: translateY(-1000px);
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+        
+}
+/* For All Headers - Except HOME Header */
+.anotherHeader{
+    background: transparent;
+    position: relative;
+    .bars{
+        img{
+            position: relative;
+            background: transparent;
+        }
+    }
+}
+/* For All Sections - Except HOME Section */
+.grander{
+    height: 100dvh;
+    @include mediaQuery("iPhone"){
+        height: 40dvh;
+        width: auto;
+    }
+    @include mediaQuery("iPad"){
+        height: 50dvh;
+        width: auto;
+    }
+    img{
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        filter: grayscale(0.5);
+        @include mediaQuery("iPad"){
+            height: inherit;
+        }
+        @include mediaQuery("iPhone"){
+            height: inherit;
+        }
+        
+    }
+}
+/* For All Articles - Except HOME Article */
+.allArticle{
+    position: relative;
+    .menuText{
+        @include text(5rem,unset,unset,7rem);
+        h1{
+            @include font(900);
+            @include h1(6);
+        }
+        .lorem{
+            @extend %lorem;
+            position: absolute;
+            font-size: 1rem;
+        }
+    }
+    .contactRightText{
+        position: relative;
+        width: fit-content;
+        left: 7rem;
+        top: 3rem;
+        h1{
+            @include font(900);
+            font-size: 5rem;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+        .lorem{
+            @extend %lorem;
+            font-size: 0.7rem;
+        }
+    }
+    .contactLeftText{
+        position: absolute;
+        right: 3rem;
+        top: 20rem;
+        .upLeft{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2{
+                @include font(700);
+                font-size: 1rem;
+                color: #ffffff;
+            }
+            p{
+                @include font(300);
+                font-size: 0.9rem;
+                color: #ffffff;
+            }
+        }
+        hr{
+            margin: 1rem 0;
+        }
+        .downLeft{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            span{
+                color: #ffffff;
+            }
+        }
+    }
+    .aboutText{
+        position: absolute;
+        right: 7rem;
+        top: 7rem;
+        h1{
+            @include font(900);
+            font-size: 7rem;
+            color: #ffffff;
+            letter-spacing: 1px
+        }
+        .lorem{
+            @extend %lorem;
+            margin-left: 1rem;
+            font-size: 1rem;
+        }
+        
+    }
+    .portfolioText{
+        margin: 7rem 0;
+        h1{
+            @include font(900);
+            font-size: 8rem;
+            color: #ffffff;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+    }
+    .blogsText{
+        margin: 7rem 0;
+        h1{
+            @include font(900);
+            font-size: 8rem;
+            color: #ffffff;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+    }
+    @include mediaQuery("iPhone"){
+        .menuText{
+            @include text(0rem,unset,unset,2rem);
+            h1{
+                font-size: 2rem;
+            }
+            .lorem{
+                font-size: 0.5rem;
+            }
+        }
+        .contactRightText{
+            position: relative;
+            width: fit-content;
+            left: 2rem;
+            top: 0;
+            h1{
+                font-size: 1.7rem;
+            }
+            .lorem{
+                font-size: 0.5rem;
+            }
+        }
+        .contactLeftText{
+            position: absolute;
+            top: 6rem;
+            right: 2rem;
+            .upLeft{
+                h2{
+                    font-size: 0.8rem;
+                }
+                p{
+                    font-size: 0.6rem;
+                }
+            }
+            hr{
+                margin: 0.8rem 0;
+            }
+            .downLeft{
+                gap: 0.8rem;
+                h3{
+                    font-size: 0.7rem;
+                }
+                p{
+                    font-size: 0.6rem;
+                }
+            }
+        }
+        .aboutText{
+            right: 1rem;
+            top: 1rem;
+            h1{
+                font-size: 2.5rem;
+            }
+            .lorem{
+                font-size: 0.6rem;
+                margin-left: 0;
+            }
+        }
+        .portfolioText{
+            margin: 3rem 0;
+            h1{
+                font-size: 4rem;
+            }
+        }
+        .blogsText{
+            margin: 1rem 0;
+            h1{
+                font-size: 4rem;
+            }
+        }
+    }
+    @include mediaQuery("iPad"){
+        .menuText{
+            h1{
+                font-size: 4rem;
+            }
+            .lorem{
+                font-size: 1rem;
+            }
+        }
+        .contactRightText{
+            h1{
+                font-size: 3.5rem;
+            }
+            .lorem{
+                font-size: 0.8rem;
+            }
+        }
+        .contactLeftText{
+            top: 16rem;
+        }
+        .aboutText{
+            top: 5rem;
+            h1{
+                font-size: 5rem;
+            }
+        }
+    }
+}
+/* For BARS - Devices */
+.none{
+    display: none !important; 
+}
+.block{
+    display: block !important;
+}
+.visible{
+    visibility: visible !important;
+    transform: translateY(0px) !important;
+}
+
+/* Home Articles */
+.introArticle{
+    display: flex;
+    padding: 2rem 6rem;
+    height: 150dvh;
+    background-color: var(--233000, #233000) ;
+.introText{
+    position: relative;
+    z-index: 2;
+    h1{
+        @include font(700);
+        color: white;
+        font-size: 5rem;
+        letter-spacing: 2px;
+        z-index: 1;
+    }
+    .lorem{
+        @include font(300);
+        @extend %lorem
+    }
+    .scroll{
+        color: #ffffff;
+        margin: 1rem 0 ;
+        font-size: 2rem;
+        rotate: 90deg;
+        position: absolute;
+        left: -9rem;
+        bottom: 16rem;
+        cursor: pointer;
+    }
+    
+}
+.introImages{
+    position: absolute;
+    right: 0;
+    background-color: var(--233000, #233000) ;
+        .meatPlate{
+            width: 43.5rem;
+            height: 44.1875rem;
+            border-radius: 10px;
+            z-index: 0;
+            position: absolute;
+            right: 5rem;
+        }
+        .spices1Plate,.spices2Plate,.spices3Plate{
+            width: 12.625rem;
+            height: 12rem;
+            position: relative;
+            top: 34rem;
+            margin: 0 1rem;
+            right: 17rem;
+        }
+}
+@include mediaQuery("iPhone"){
+    padding: {
+        top: 2rem;
+        right: 0.5rem;
+        bottom: 10rem;
+        left: 0.5rem;
+    };
+    height: fit-content;
+    .introText{
+        height: fit-content;
+        h1{
+            font-size: 2.3rem;
+        }
+        .lorem{
+            width: 14rem;
+        }
+        .scroll{
+            display: none;
+        }
+    }
+    .introImages{
+        right: 0;
+        position: relative;
+        width: auto;
+        .meatPlate{
+            position: absolute;
+            filter: brightness(0.8);
+            width: 19.5rem;
+            height: auto;
+            top: 0;
+            right: -3.5rem;
+        }
+        .spices1Plate,.spices2Plate,.spices3Plate{
+            position: absolute;
+            filter: brightness(0.8);
+            width:  6.625rem;
+            height: auto;
+            top: 18rem;
+        }
+        .spices1Plate{
+            right: 9rem;
+        }
+        .spices2Plate{
+            right: 2rem;
+        }
+        .spices3Plate{
+            right: -5rem;
+        }
+    }
+}
+@include mediaQuery("iPhone+"){
+    .introImages{
+        .meatPlate{
+            right: -6.5rem;
+        }
+    }
+}
+@include mediaQuery("iPad"){
+    height: 60dvh;
+    padding: 0 3rem;
+    .introText{
+        h1{
+            font-size: 4.3rem;
+        }
+        .scroll{
+            display: none;
+        }
+    }
+    .introImages{
+        .meatPlate{
+            width: 27.5rem;
+            height: auto;
+            right: 3rem;
+        }
+        .spices1Plate,.spices2Plate,.spices3Plate{
+            width: 8.625rem;
+            height: auto;
+            top: 25rem;
+        }
+        .spices1Plate{
+            right: 5rem;
+        }
+        .spices2Plate{
+            right: 6rem;
+        }
+        .spices3Plate{
+            right: 6rem;
+        }
+    }
+}
+}
+.secondArticle{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5rem;
+    padding: 3rem;
+    background-color: var(--233000, #233000) ;
+.seaFoodbox{
+    margin-bottom: 3rem;
+    .seaFoodPlate{
+        width: 33.5rem;
+        height: 25rem;
+        border-radius: 10px;
+    }
+    p{
+        @include font(500);
+        color: #ffffff;
+        font-size: 3rem;
+    }
+    .lorem{
+        @include font(300);
+        @extend %lorem
+    }
+}
+.longSpeciesbox{
+    position: absolute;
+    right: 6rem;
+    .lorem{
+        @include font(300);
+        @extend %lorem;
+        width: 23.75rem;
+    }
+    .longSpecies{
+        width: 23.75rem;
+        height: 34.375rem;
+        border-radius: 10px;
+    }
+}
+@include mediaQuery("iPhone"){
+    flex-direction: column;
+    padding: 0;
+    .seaFoodbox{
+        margin-top:6rem ;
+        width: 100%;
+        .seaFoodPlate{
+            width: 18.5rem;
+            height: auto;
+            filter: brightness(0.7);
+            position: relative;
+            right: -3rem;
+            z-index: 1;
+        }
+        p{
+            font-size: 2.5rem;
+            position: absolute;
+            top: 3rem;
+            left: 1rem;
+            z-index: 3;
+        }
+        .lorem{
+            display: none
+        }
+    }
+    .longSpeciesbox{
+        position: relative;
+        margin-bottom: 2rem;
+        width: 23rem;
+        height: 20rem;
+        .lorem{
+            position: absolute;
+            z-index: 2;
+            text-align: center;
+            bottom: 1rem;
+            left: 6rem;
+        }
+        .longSpecies{
+            width: 12.75rem;
+            height: auto;
+            position: absolute;
+            left: 7rem;
+            top: 1rem;
+            filter: brightness(0.7);
+        }
+    }
+}
+@include mediaQuery("iPad"){
+    height: 45rem;
+    margin-bottom: 0;
+    .seaFoodbox{
+        margin-top: 2rem;
+        .seaFoodPlate{
+            width: 22.5rem;
+            height: auto;
+        }
+        p{
+            position: relative;
+            top: 0rem;
+            left: 1rem;
+        }
+        .lorem{
+            display: block;
+            width: 15rem;
+        }
+    }
+    .longSpeciesbox{
+        top: -18rem;
+        right: -7rem;
+        .lorem{
+            display: block;
+            position: relative;
+            top: 24rem;
+            left: -4rem;
+            text-align: left;
+        }
+        .longSpecies{
+            width: 19.75rem;
+            height: auto;
+            position: absolute;
+            left: -5rem;
+            top: 30rem;
+        }
+    }
+}
+}
+/* Menu Section */
+.menuSection{
+    @include section;
+    margin-top: 2.5rem;
+    height: max-content;
+    overflow: hidden;
+    .flowers{
+        width: 22rem;
+        height: auto;
+        z-index: 0;
+        position: absolute;
+        right: 0;
+        top: 0.3rem;
+    }
+    h2{
+        @include font(600);
+        position: relative;
+        font-size: 5rem ;
+        z-index: 2;
+    }
+    .lorem,.loremMenu{
+        @extend %lorem;
+        color: black;
+    }
+    .foodMenu{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 2rem;
+        margin: 5rem 0;
+        .foodInfo{
+            position: relative;
+            .price{
+                position: absolute;
+                right: 0.5rem;
+                top: -1.3rem;
+            }
+            h3{
+                @include font(700);
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+                margin: 0.5rem 0;
+            }
+        }
+    }
+    @include mediaQuery("iPhone"){
+        padding: 0 1rem;
+        h2{
+            text-align: center;
+        }
+        .lorem{
+            text-align: left;
+            width: auto;
+        }
+        .loremMenu{
+            text-align: center;
+            width: auto;
+        }
+    }
+}
+.cookSection{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    padding: {
+        top: 1.5rem;
+        right: 7rem;
+        left: 7rem;
+        bottom: 1rem;
+    };
+    height: 31rem;
+    position: relative;
+    background-color: var(--EBF0E4, #EBF0E4);
+    .leftChef{
+        position: relative;
+        margin-top: 2rem;
+        height: max-content;
+    .chef{
+        position: absolute;
+        width: 28rem;
+        height: auto;
+        z-index: 0;
+        overflow: hidden;
+    }
+    .brownplate{
+        position: absolute;
+        z-index: 1;
+        width: 13.9rem;
+        top: 1rem;
+        height: auto;
+        left: 0.5rem;
+    }
+    .leafOne{
+        width: 12rem;
+        position: absolute;
+        left: 0rem;
+        top: -1rem;
+        z-index: 0;
+    }
+}
+.rightContent{
+    padding-top: 3rem;
+    .content{ 
+        h3{
+        @include font(900);
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            margin: 0.5rem 0;
+    }
+    .lorem{
+        font-family: sans-serif;
+        font-size: 1rem;
+        color: rgb(65, 64, 64);
+    }
+    }
+    .leafOne{
+        width: 15rem;
+        position: absolute;
+        right: 5rem;
+        bottom: 0.5rem;
+    }
+}
+@include mediaQuery("iPhone"){
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
+    .leftChef{
+        .brownplate{
+            display: none;
+        }
+        .chef{
+            width: 23rem;
+            left: -8rem;
+            z-index: 2;
+        }
+    }
+    .rightContent{
+        padding: 0;
+        .content{
+            h3{
+                font-size: 2.5rem;
+                position: absolute;
+                top: 2rem;
+                text-align: center;
+            }
+            .lorem{
+                position: absolute;
+                top: 10rem;
+                text-align: center;
+            }
+        }
+    }
+}
+@include mediaQuery("iPad"){
+    padding: {
+        right: 0;
+        left: 0;
+    };
+    .leftChef{
+        .chef{
+            width: 29rem;
+            left: -9rem;
+            top: -1rem;
+            bottom: 0;
+        }
+        .brownplate{
+            display: none;
+        }
+    }
+    .rightContent{
+        .content{
+            h3{
+                font-size: 4.5rem;
+                text-align: left;
+            }
+            .lorem{
+                top: 15rem;
+                text-align: left;
+            }
+        }
+        .leafOne{
+            width: 14rem;
+        }
+    }
+}
+}
+/* Description Section */
+.descriptionSection{
+    width: auto;
+    .descContent{
+        display: flex;
+        justify-content: center;
+        margin: 2.5rem;
+        padding-top: 2rem;
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem;
+        h3{
+            @include font(900);
+            font-size: 2rem;
+            text-align: center;
+        }
+        .lorem{
+            @extend %lorem;
+            color: #233000;
+            width: auto;
+            text-align: center;
+        }
+        img{
+            width: 10rem;
+            height: auto;
+            align-self: center;
+            background-color: var(--EBF0E4, #EBF0E4);
+            border-radius: 50%;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        }
+    }
+    .recipeContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .recipes{
+            justify-self: center;
+            position: relative;
+            .fruitBox{
+                width: 34rem;
+                height: auto;
+                border-radius: 10px;
+                margin-bottom: 1rem;
+            }
+            .fashion{
+                background-color: #5E6600;
+                width: 7rem;
+                text-align: center;
+                color: #ffffff;
+                padding: 0.6rem;
+                border-radius: 10px;
+                letter-spacing: 1px;
+                position: absolute;
+                top: 0.3rem;
+                right: 2.5rem;
+            }
+            .userData{
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                .userImg{
+                    width: 3rem;
+                    height: auto;
+                    cursor: pointer;
+                }
+                .user{
+                    @include font(600);
+                    cursor: pointer;
+                    color: #4D4D4D;
+                    margin: 0 0.9rem;
+                } .userDate,.userTime,.userComments{
+                    @include font(600);
+                    color: #4D4D4D;
+                    margin: 0 0.9rem;
+                }
+            }
+            .recipeName {
+                h3{
+                    @include font(800);
+                    font-size:2rem;
+                    margin: 1rem 0;
+                }
+                .lorem{
+                    @extend %lorem;
+                    color: #4D4D4D;
+                }
+                .readmore{
+                    display: flex;
+                    align-items: flex-end;
+                    margin: 2rem 0;
+                    a{
+                        @include font(300);
+                        text-decoration: none;
+                        color: #4D4D4D;
+                        letter-spacing: 1px;
+                    }
+                    img{
+                        width: 2rem;
+                        height: auto;
+                        margin-left: 0.6rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .blog{
+        padding: 1rem 4rem;
+    }
+    @include mediaQuery("iPhone"){
+        display: grid;
+        justify-items: start;
+        .descContent{
+            display: grid;
+            margin: 0 10px;
+            width: auto;
+            .content{
+                margin: 0;
+            }
+        }
+        .recipeContent{
+            display: flex;
+            flex-direction: column;
+            margin-left: 0;
+            margin: {
+                top: 1rem;
+                right: 0rem;
+                bottom: 1rem;
+                left: 0;
+            };
+            .recipes{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .fruitBox{
+                    width: 22rem;
+                }
+                .fashion{
+                    right: 2rem;
+                    display: none;
+                }
+                .recipeName{
+                    padding: 4px;
+                    .lorem{
+                        width: auto;
+                    }
+                }
+
+            }
+        }
+        .blog{
+            padding: 1rem 0;
+        }
+    }
+    @include mediaQuery("iPad"){
+        .descContent{
+            display: flex;
+            width: auto;
+            .content{
+                justify-content: space-around
+            }
+        }
+        .recipeContent{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+/* Reservation Section */
+.reservSection{
+    @include section;
+    display: grid;
+    justify-items: center;
+    margin: 3rem 0;
+    width: auto;
+    background-color: #EBF0E4;
+    padding-bottom: 5rem;
+    h3{
+        @include font(400);
+        font-size: 3rem;
+        letter-spacing: 2px;
+        margin-top: 5rem;
+        text-align: center;
+    }
+    .lorem{
+        @include font(300);
+        color: #4D4D4D;
+        text-align: center;
+    }
+    .reservInputs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 0;
+        input{
+            @include roboto(500);
+            font-size: 15px;
+            width: 18rem;
+            padding:0.7rem;
+            margin:1rem;
+            border: 1px solid black;
+            outline: none;
+            &::selection{
+                background-color: #d8dbd3;
+            }
+            &::-webkit-inner-spin-button , &::-webkit-outer-spin-button{
+                -webkit-appearance: none;
+            }
+        }
+        
+    }
+    button{
+        @include roboto(400);
+        cursor: pointer;
+        position: absolute;
+        bottom: 3rem;
+        background-color: #5E6600;
+        padding: 0.8rem 2rem;
+        border: transparent;
+        color: white;
+        width: 10rem;
+    }
+    @include mediaQuery("iPhone"){
+        padding: 0;
+        margin: 1rem auto;
+        width: auto;
+        .reservInputs{
+            display: grid;
+            justify-items: center
+        }
+        button{
+            bottom: 1rem;
+        }
+    }
+    @include mediaQuery("iPad"){
+        width: auto;
+        .reservInputs{
+            display: grid;
+            justify-items: center;
+        }
+    }
+}
+
+/* Calories Section */
+.calMenu{
+    @include section;
+    h3{
+        @include font(700);
+        text-align: center;
+        color: black;
+        font-size:3rem ;
+    }
+    .lorem{
+        @extend %lorem;
+        color: #4D4D4D;
+        text-align: center;
+    }
+    .calBoxs{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .calContent{
+            margin: 3rem 0;
+            position: relative;
+            img{
+                width: 20rem;
+                height: auto;
+                border-radius: 10px
+            }
+            p{
+                @include font(900);
+                font-size: 1.8rem;
+                letter-spacing:1px;
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                color: #5E6600;
+            }
+            .arrow{
+                width: 2rem;
+                height: auto;
+                position: absolute;
+                top: 1.6rem;
+                right: 2rem;
+                margin-left: 0.6rem;
+                cursor: pointer;
+            }
+        }
+    }
+    @include mediaQuery("iPhone"){
+        padding: 0;
+        margin: 3rem 0;
+        .calBoxs{
+            display: grid;
+        }
+        .lorem{
+            width: auto;
+        }
+    }
+    @include mediaQuery("iPad"){
+        padding: 0;
+        .calBoxs{
+            display: flex;
+            width: auto;
+            .calContent{
+                img{
+                    width: 14rem;
+                }
+            }
+        }
+    }
+}
+
+/* Testimonial Section */
+.testimonialSection{
+    @include section;
+    .testimonial{
+        @include font(700);
+        font-size:2rem;
+        text-align: center;
+    }
+    .coma{
+            font-size: 32rem;
+            color: #4D4D4D;
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            top: -23rem;
+            right: 5rem;
+            opacity: 0.1;
+            z-index: 0;
+        }
+    .clientBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5rem;
+        .client{
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            img{
+                width: 4rem;
+                height: auto;
+                margin-right: 1rem;
+                cursor: pointer;
+            }
+            h3{
+                @include font(700);
+                font-size: 1.5rem;
+            }
+            p{
+                @include font(400);
+                color: #4D4D4D;
+                font-size: 0.9rem;
+            }
+        }
+        .testimonialNum{
+            @include font(700);
+            display: inline-flex;
+            align-items: end;
+            .arrow{
+                width: 1.5rem;
+                height: auto;
+                margin: 0 0.7rem;
+                cursor: pointer;
+            }
+            .changer{
+                margin-right: 0.2rem;
+            }
+        }
+    }
+    @include mediaQuery("iPhone"){
+        padding: 0;
+        .coma{
+            top: -25rem;
+            right: 0rem;
+        }
+        .clientBox{
+            margin: 2rem 10px;
+        }
+    }
+}
+
+/* Menu Page Section*/
+.menuItems{
+    position: relative;
+    padding: 2rem 0;
+    .blueberry{
+        width: 13rem;
+        height: auto;
+        position: absolute;
+        right: 0rem;
+    }
+    .allContent{
+        display: grid;
+        justify-items: center;
+        grid-template-rows: 1fr 1fr 1fr;
+        .content{
+            display: grid;
+            margin-top: 5rem;
+            h1{
+                @include font(600);
+                font-size: 3rem;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+            .lorem{
+                @include font(300);
+                color: black;
+                text-align: center;
+            }
+            .items{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                margin-top: 2rem;
+                .imgDiv{
+                    display: flex;
+                    justify-content: center;
+                    .itemImg{
+                        width: 23.5rem;
+                        height: auto;
+                        border-radius: 10px;
+                    }
+                }
+                .itemContent{
+                    .menutitle{
+                        margin-bottom: 1rem;
+                        .price{
+                            @include font(500);
+                            font-size: 1.2rem;
+                            text-align: right;
+                        }
+                        hr{
+                            margin: 0.8rem 0;
+                        }
+                        h2{
+                            @include font(900);
+                            letter-spacing: 1px;
+                            font-size: 1.9rem;
+                        }
+                        .lorem{
+                            @include font(300);
+                            color: black;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        }
+                    }
+                
+            }
+            }
+        }
+    }
+    @include mediaQuery("iPhone"){
+        .allContent{
+            .content{
+                padding: 0 2rem;
+                .items{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    .imgDiv{
+                        .itemImg{
+                            width: 19.5rem;
+                        }
+                    }
+                }
+
+            }
+            #mains{
+                .items{
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+    @include mediaQuery("iPad"){
+    .allContent{
+        .content{
+            padding: 0 1rem;
+        }
+    }
+    }
+}
+
+/* Contact Page Artciles */
+.detailsArticle{
+    position: relative;
+    padding: 10rem 6rem;
+    .detailBoxs{
+        display: grid;
+        gap: 3rem;
+        .detailContent{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 4rem;
+            .imgs{
+                position: relative;
+                .orangeImg{
+                    width: 15rem;
+                    height: auto;
+                    position: absolute;
+                    top: -9rem;
+                    right: -5rem;
+                }
+                .imgOne{
+                    width: 30rem;
+                    height: inherit;
+                    border-radius: 10px;
+                    position: relative;
+                }
+            }
+            span{
+                @include font(700);
+                align-self: flex-end;
+                justify-self: center;
+                font-size: 1.5rem;
+                margin-bottom: 5rem;
+                a{
+                    text-decoration: none;
+                    color:#919e04;
+                }
+            }
+        }
+        #another{
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row-reverse;
+            .content{
+                display: grid;
+                span{
+                    margin-bottom: 1rem;
+                }
+                button{
+                    @include font(400);
+                    font-size: 1rem;
+                    height: fit-content;
+                    width: 10rem;
+                    background: transparent;
+                    padding: 1rem;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    margin-bottom: 5rem;
+                    
+                }
+            }
+        }
+    }
+    @include mediaQuery("iPhone"){
+        margin-top: 3rem;
+        padding: 3rem 0;
+        .detailBoxs{
+            gap: 0;
+            .detailContent{
+                flex-direction: column;
+                align-items: center;
+                .imgs{
+                    .orangeImg{
+                        width:10rem ;
+                        top: -3rem;
+                        right: 0;
+                    }
+                    .imgOne{
+                        width:20rem ;
+                        margin-left: 1.3rem;
+                    }
+                }
+                span{
+                    align-self: auto;
+                    text-align: center;
+                    margin-left: 1.3rem;
+                }
+            }
+            #another{
+                flex-direction: column;
+                align-items: center;
+                .imgs{
+                    .imgOne{
+                        width: 20rem;
+                    }
+                }
+                .content{
+                    span{
+                        width: 15rem;
+                        text-align: center;
+                    }
+                    button{
+                        margin-left: 3.3rem;
+                    }
+                }
+            }
+        }
+    }
+    @include mediaQuery("iPad"){
+        padding: 10rem 4rem;
+        .detailBoxs{
+            .detailContent{
+                .imgs{
+                    .imgOne{
+                        width: 25rem;
+                    }
+                }
+            }
+        }
+    }
+}
+#reservContact{
+    .mint{
+        width: 17rem;
+        height: auto;
+        position: absolute;
+        left: 12rem;
+        top: 2rem;
+    }
+    .reservInputs{
+        display: grid;
+        justify-items: center;
+        grid-template-areas: 
+        "fr fr fr fr fr fr  ls ls ls ls ls ls" 
+        "em em em em em em em em em em em em" "ph ph ph ph ph ph ph ph ph ph ph ph" "dt dt dt dt dt dt tm tm tm tm tm tm" "prs prs prs prs prs prs prs prs prs prs prs prs";
+        width: 100%;
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        .firstName{
+            grid-area: fr;
+        }
+        .lastName{
+            grid-area: ls;
+        }
+        .email{
+            grid-area: em;
+        }
+        .phone{
+            grid-area: ph;
+        }
+        .date{
+            grid-area: dt;
+        }
+        .time{
+            grid-area: tm;
+        }
+        .persons{
+            grid-area: prs;
+        }
+        .firstName , .lastName , .date , .time{
+            width: 29rem;
+        }
+        .email , .phone ,.persons{
+            width: 60rem;
+        }
+        button{
+            bottom: 5rem;
+        }
+    }
+    @include mediaQuery("iPad"){
+        padding: 0;
+        width: auto;
+        .mint{
+            left: 3rem;
+        }
+        .reservInputs{
+            .firstName , .lastName , .date , .time {
+                width: 21rem;
+            }
+            .email , .phone , .persons {
+                width:44rem ;
+            }
+            button{
+                bottom: 1rem;
+            }
+        }
+    }
+    @include mediaQuery("iPhone"){
+        .mint{
+            left: 0rem;
+        }
+        .reservInputs{
+            grid-template-areas: none;
+            grid-template-rows: repeat(8,1fr);
+            width: auto;
+            .firstName , .lastName , .date , .time{
+                grid-area: auto;
+                width: auto;
+            }
+            .email , .phone ,.persons{
+                grid-area: auto;
+                width: auto;
+            }
+            button{
+                bottom: 4rem;
+            }
+        }
+    }
+}
+
+/* About Section */
+.aboutSection{
+    position: relative;
+    height: fit-content;
+    display: grid;
+    gap: 3rem;
+    margin: 3rem 0;
+    padding: 1rem 5rem;
+    .tomatoImg{
+        position: absolute;
+        width: 12rem;
+        height: auto;
+        top: -2rem;
+        right: 36rem;
+    }
+    .aboutContent{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 5rem;
+        position: relative;
+        .contentText{
+            align-self: flex-end;
+            h2{
+                @include font(700);
+                font-size: 3rem;
+                letter-spacing: 1px
+            }
+            .lorem{
+                @include font(300);
+                font-size: 0.8rem;
+                width: auto;
+            }
+        }
+        .chefCooking{
+            width: 30rem;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+    .ceosContent{
+        display: flex;
+        align-items: center;
+        position: relative;
+        .ceos{
+            position: relative;
+            margin: 0 2rem;
+            h2{
+                @include font(900);
+                font-size: 2rem;
+                text-align: center;
+            }
+            p{
+                @include font(500);
+                text-align: center;
+            }
+            img{
+                width: 30rem;
+                height: auto;
+                border-radius: 10px;
+                margin: 1rem 0;
+            }
+        }
+        .lorem{
+            @include font(300);
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+    @include mediaQuery("iPhone"){
+        padding: 0;
+        .tomatoImg{
+            width: 10rem;
+            top: -3rem;
+            right: 0rem;
+        }
+        .aboutContent{
+            flex-direction: column-reverse;
+            align-items: center;
+            padding: 1rem 0;
+            .chefCooking{
+                width: 23rem;
+            }
+            .contentText{
+                padding: 0 0.5rem;
+            }
+        }
+        .ceosContent{
+            flex-direction: column;
+            .ceos{
+                margin: 0;
+                img{
+                    width: 23rem;
+                }
+            }
+        }
+        .chefContent{
+            flex-direction: column-reverse;
+        }
+    }
+    @include mediaQuery("iPad"){
+        padding: 0;
+        .aboutContent{
+            padding: 0 1rem;
+        }
+    }
+}
+.video{
+    position: relative;
+    margin: 3rem 0;
+    .aboutVideo{
+        width: 100%;
+        height: auto;
+        filter: brightness(40%);
+    }
+    .play{
+        position: absolute;
+        cursor: pointer;
+        width: 10rem;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    @include mediaQuery("iPhone"){
+        .play{
+            width: 5rem;
+        }
+    }
+    @include mediaQuery("iPad"){
+        .play{
+            width: 8rem;
+        }
+    }
+}
+.aboutProcess{
+    position: relative;
+    margin: 3rem 0;
+    padding: 1rem 5rem;
+    .rosemaryUp{
+        position: absolute;
+        width: 12rem;
+        right: 0rem;
+    }
+    h1{
+        @include font(900);
+        font-size: 3rem;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+    .processes{
+        display: grid;
+        grid-template-areas: "o o o o o o o o o o o o" "n n n n n n c c c c c c";
+        position: relative;
+        margin: 3rem 0;
+        padding: 1rem 5rem;
+        z-index: 1;
+        .process{
+            display: flex;
+            align-items: center;
+            grid-area: o;
+            gap: 3rem;
+            margin: 3rem;
+            img{
+                width: 25rem;
+                height: auto;
+                border-radius: 10px;
+            }
+            h2{
+                @include font(900);
+                font-size: 3rem;
+            }
+            .lorem{
+                @include font(400);
+            }
+        }
+        .column{
+            grid-area: c;
+            flex-direction: column;
+            justify-items: center;
+            gap: 2rem;
+            h2{
+                text-align: center;
+            }
+            .lorem{
+                text-align: center;
+                width: 20rem;
+            }
+        }
+        .next{
+            @extend .column;
+            grid-area: n;
+        }
+    }
+    .rosemaryDown{
+        position: absolute;
+        width: 12rem;
+        left: 0rem;
+        bottom: 6rem;
+    }
+    @include mediaQuery("iPhone"){
+        padding: 0;
+        .processes{
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            .process{
+                display: grid;
+                justify-items: center;
+                margin: 1rem;
+                img{
+                    width: 22rem;
+                }
+                h2{
+                    text-align: center;
+                }
+                .lorem{
+                    text-align: center;
+                }
+            }
+            .column , .next{
+                position: relative;
+                right: 0;
+            }
+            .next{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    @include mediaQuery("iPad"){
+        padding: 1rem;
+        .processes{
+            padding: 0;
+            .process{
+                margin: 2rem;
+                img{
+                    width: 20rem;
+                }
+            }
+            .next{
+                right: 24rem;
+            }
+        }
+    }
+}
+
+/* Portfolio Article */
+.portfolioArticle{
+    position: relative;
+    margin: 3rem 0;
+    padding: 1rem 5rem;
+    nav{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        a{
+            @include font(700);
+            display: inline-block;
+            font-size: 1.3rem;
+            text-decoration: none;
+            color:#4D4D4D ;
+            text-align: center;
+            transition:  hover 2s ease-in-out;
+            position: relative;
+                &::after{
+                    content: "";
+                    display: block;
+                    background-color: #c4c7bf;
+                    width: 0%;
+                    height: 2px;
+                    transition: all 0.5s ease-in-out;
+                }
+                &:hover::after{
+                    width:100%;
+                }
+                &:hover{
+                    color: #7a7a78;
+                }
+        }
+    }
+    .portfolioItems{
+        position: relative;
+        margin: 3rem 0;
+        padding: 1rem 3rem;
+        .items{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 4rem 0;
+            .item{
+                position: relative;
+                width: fit-content;
+                cursor: pointer;
+                .portfolioImg{
+                        width: 48rem;
+                        height: 35rem;
+                        border-radius: 10px;
+                        filter: brightness(0.8);
+                }
+                .portfolioImgshrink{
+                    width: 18rem;
+                    height: 35rem;
+                    border-radius: 10px;
+                    filter: brightness(0.8);
+                }
+                .normal{
+                    width: 33rem;
+                    height: auto;
+                    border-radius: 10px;
+                }
+                .itemInfo{
+                    position: absolute;
+                    width: auto;
+                    bottom: 1rem;        
+                    padding: 0 1rem;
+                        a{
+                            @include font(700);
+                            text-decoration: none;
+                            font-size: 2rem;
+                            color: white;
+                            margin: 0.5rem 0;
+                        }
+                        p{
+                            @include font(400);
+                            color: white;
+                        }
+                }
+            }
+        }
+    }
+    @include mediaQuery("iPhone"){
+        padding: 0;
+        nav{
+            gap: 0.4rem;
+            a{
+                font-size: 1rem;
+            }
+        }
+        .portfolioItems{
+            padding: 0 0.5rem;
+            .items{
+                gap: 0.8rem;
+                .item{
+                    .portfolioImg{
+                        width: 15rem;
+                        height: auto;
+                    }
+                    .portfolioImgshrink{
+                        width: 7rem;
+                        height: auto;
+                    }
+                    .normal{
+                        width: 11rem;
+                    }
+                    .itemInfo{
+                        bottom: 2rem;
+                        a{
+                            font-size: 1rem;
+                        }
+                        p{
+                            font-size: 0.8rem;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    @include mediaQuery("iPad"){
+        padding: 0;
+        .portfolioItems{
+            padding: 0;
+            .items{
+                .item{
+                    .portfolioImg{
+                        width: 27.5rem;
+                        height: auto;
+                    }
+                    .portfolioImgshrink{
+                        width: 13rem;
+                        height: auto;
+                    }
+                    .normal{
+                        width: 20.5rem;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Footer */
+footer{
+    padding: 1.5rem 0;
+    position: relative;
+    height:auto ;
+    background-color: #233000;
+    .upBox{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0 6rem;
+    h1{
+        @include font(700);
+        color: white;
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+        .contactBox{
+            display: grid;
+            justify-items: center;
+            ol {
+                text-align: center;
+                margin: 1rem 0;
+                padding: 0;
+                h2{
+                    @include font(700);
+                    color: #ffffff;
+                    letter-spacing: 2px;
+                    font-size: 1.5rem;
+                }
+                li{
+                    list-style: none;
+                    line-height: 1.5rem;
+                    a{
+                        @include font(400);
+                        color: #ffffff;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .address{
+                @include font(400);
+                color: #ffffff;
+                text-align: center;
+            }
+        }
+        .subscribeBox{
+            margin: 0 3rem;
+            form{
+                display: grid;
+                align-items: center;
+                margin-left: 2rem;
+                .head{
+                    @include font(700);
+                    color: white;
+                    font-size: 1.3rem;
+                    letter-spacing: 1px;
+                    margin-bottom: 0.9rem;
+                }
+                input{
+                    @include roboto(300);
+                    margin: 0.5rem 0;
+                    letter-spacing: 1px;
+                    width: 20rem;
+                    height: 2.3rem;
+                    padding: 0.7rem;
+                    outline: none;
+                    background: transparent;
+                    border: 0.5px solid white;
+                    color: white;
+                    &::placeholder{
+                        color: #EBF0E4;
+                    }
+                }
+                .hint{
+                    @include font(200);
+                    color: white;
+                    font-size: 0.6rem;
+                    letter-spacing: 1px;
+                }
+                button{
+                    @include font(400);
+                    color: #ffffff;
+                    position: absolute;
+                    width: 10rem;
+                    height: 2.5rem;
+                    right: 2rem;
+                    margin-top: 1.8rem;
+                    background-color: #5E6600;
+                    border: transparent;
+                    letter-spacing: 1px;
+                    padding: 0.6rem;
+                }
+            }
+        }
+    }
+    .downBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 6rem;
+        margin: {
+            top: 2rem;
+            bottom: 1rem;
+        };
+        .rights{
+            @include font(400);
+            color: #ffffff;
+            letter-spacing: 1px;
+            a{
+                cursor: pointer;
+                font-size: 1rem;
+                text-decoration: none;
+                color: #EBF0E4;
+                &:focus{
+                    color: #ffffff;
+                }
+            }
+        }
+        .socials{
+            display: flex;
+            gap: 1rem;
+            img{
+                cursor: pointer;
+            }
+        }
+    }
+    @include mediaQuery("iPhone"){
+        width: fit-content;
+        .upBox{
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            h1{
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                font-size: 1.5rem;
+            }
+            .contactBox{
+                display: none;
+            }
+            .subscribeBox{
+                form{
+                    button{
+                        height: 2.5rem;
+                        margin-top: 1.8rem;
+                        right: 1rem;
+                    }
+                }
+            }
+        }
+        .downBox{
+            padding: 0 1rem;
+        }
+    }
+    @include mediaQuery("iPad"){
+        width: fit-content;
+        .upBox{
+            h1{
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+            }
+            .subscribeBox{
+                position: relative;
+                left: -14rem;
+                top:1rem ;
+                form{
+                    input{
+                        height: 2.4rem;
+                    }
+                    button{
+                        height: 2.5rem;
+                        margin-top: 1.9rem;
+                        left: 20rem;
+                    }
+                }
+            }
+            .contactBox{
+                display: block;
+                position: absolute;
+                right: 3rem;
+                top: 0rem;
+            }
+        }
+    }
+}
