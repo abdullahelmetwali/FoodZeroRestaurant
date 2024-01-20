@@ -348,7 +348,7 @@ header nav .number {
   }
   .allArticle .contactLeftText {
     position: absolute;
-    top: 6rem;
+    top: 5rem;
     right: 2rem;
   }
   .allArticle .contactLeftText .upLeft h2 {
@@ -537,11 +537,6 @@ header nav .number {
     right: -5rem;
   }
 }
-@media (min-width: 414px) and (max-width: 736px) {
-  .introArticle .introImages .meatPlate {
-    right: -6.5rem;
-  }
-}
 @media (min-width: 768px) and (max-width: 1024px) {
   .introArticle {
     height: 60dvh;
@@ -628,7 +623,7 @@ header nav .number {
     height: auto;
     filter: brightness(0.7);
     position: relative;
-    right: -3rem;
+    left: 2rem;
     z-index: 1;
   }
   .secondArticle .seaFoodbox p {
@@ -658,7 +653,7 @@ header nav .number {
     width: 12.75rem;
     height: auto;
     position: absolute;
-    left: 7rem;
+    right: -5rem;
     top: 1rem;
     filter: brightness(0.7);
   }
