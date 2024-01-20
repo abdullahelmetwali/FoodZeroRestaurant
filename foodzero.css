@@ -5,7 +5,7 @@
   color: white;
   letter-spacing: 2px;
   width: -moz-max-content;
-  width: max-content;
+  width: auto;
 }
 
 * {
